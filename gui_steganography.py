@@ -86,7 +86,7 @@ def perform_action():
 # This code id on GUI 
 root = TkinterDnD.Tk()
 root.title("Steganography Tool")
-root.geometry("520x370")
+root.geometry("620x470")
 root.config(bg="white")
 
 try:
@@ -101,15 +101,15 @@ file_path = tk.StringVar()
 tk.Label(root, text="Select Mode:", bg="white", font=("Arial", 11)).pack(pady=5)
 mode_frame = tk.Frame(root, bg="white")
 mode_frame.pack()
-tk.Radiobutton(mode_frame, text="Hide Message", variable=mode, value="hide", command=switch_mode, bg="white").pack(side="left", padx=10)
-tk.Radiobutton(mode_frame, text="Extract Message", variable=mode, value="extract", command=switch_mode, bg="white").pack(side="left", padx=10)
+tk.Radiobutton(mode_frame, text="Hide Message", variable=mode, value="hide", command=switch_mode, bg="white").pack(side="left", padx=50)
+tk.Radiobutton(mode_frame, text="Extract Message", variable=mode, value="extract", command=switch_mode, bg="white").pack(side="left", padx=50)
 
 # Drag-and-Drop Area + Browse
 browse_frame = tk.Frame(root, bg="white")
-browse_frame.pack(pady=10)
+browse_frame.pack(pady=20)
 
 drop_label = tk.Label(browse_frame, text="Drag & Drop Image Here or Click Browse", bg="#f0f0f0", width=50, height=2, relief="groove")
-drop_label.pack(pady=5)
+drop_label.pack(pady=20)
 
 drop_label.drop_target_register(DND_FILES)
 drop_label.dnd_bind("<<Drop>>", drop_file)
