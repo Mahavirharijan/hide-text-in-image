@@ -6,7 +6,6 @@ import stepic
 import os
 import pathlib
 
-# ------------------------- FUNCTIONS -------------------------
 def browse_file():
     file = filedialog.askopenfilename(filetypes=[
         ("All Supported Images", "*.png *.jpg *.jpeg *.bmp"),
@@ -84,7 +83,7 @@ def perform_action():
     except Exception as e:
         messagebox.showerror("Error", str(e))
 
-# ------------------------- GUI -------------------------
+# This code id on GUI 
 root = TkinterDnD.Tk()
 root.title("Steganography Tool")
 root.geometry("520x370")
