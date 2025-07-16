@@ -1,27 +1,67 @@
 # 🕵️‍♂️ Image Steganography GUI Tool
 
-This is a Python-based GUI application that allows you to **hide secret messages inside image files** and extract them later.  
+This is a Python-based GUI application that allows you to **hide secret messages inside image files** and extract them later.
 The app supports **drag-and-drop**, **multiple image formats**, and **automatically saves output in your Downloads folder**.
 
 ---
 
 ## ✨ Features
 
-- ✅ Hide messages inside `.png`, `.jpg`, `.jpeg`, and `.bmp` images
-- ✅ Extract hidden messages from images
-- ✅ Drag & Drop support for easy file input
-- ✅ File browser button
-- ✅ Auto output in `Downloads` folder (no overwrite)
-- ✅ Output image named as `originalname_hidden.png`
-- 🧠 Simple GUI using Tkinter
+* ✅ Hide messages inside `.png`, `.jpg`, `.jpeg`, and `.bmp` images
+* ✅ Extract hidden messages from images
+* ✅ Drag & Drop support for easy file input
+* ✅ File browser button
+* ✅ Auto output in `Downloads` folder (no overwrite)
+* ✅ Output image named as `originalname_hidden.png`
+* 🧠 Simple GUI using Tkinter
 
 ---
 
 ## 🔧 Requirements
 
-- Python 3.6 or higher
+* Python 3.6 or higher
 
 ### 📦 Install Dependencies:
 
 ```bash
 pip install pillow stepic tkinterdnd2
+```
+
+---
+
+## 📂 Supported Formats
+
+* PNG
+* JPG / JPEG
+* BMP
+
+---
+
+## 🧑‍💻 Author
+
+**Mahavir Harijan**
+
+This tool includes a personalized ASCII-style footer with "MAHAVIR" branding inside the application GUI.
+
+---
+
+## 📦 Convert to EXE (Optional)
+
+Want to convert this to a `.exe` file?
+
+1. Install pyinstaller:
+
+```bash
+pip install pyinstaller
+```
+
+2. Run the command:
+
+```bash
+pyinstaller --onefile --windowed gui_steganography.py
+```
+
+3. Your `.exe` will be available in the `dist` folder.
+
+---
+
