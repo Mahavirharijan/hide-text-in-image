@@ -6,6 +6,7 @@ import stepic
 import os
 import pathlib
 
+# ------------------------- FUNCTIONS -------------------------
 def browse_file():
     file = filedialog.askopenfilename(filetypes=[
         ("All Supported Images", "*.png *.jpg *.jpeg *.bmp"),
@@ -67,7 +68,6 @@ def perform_action():
 
             encoded_img = stepic.encode(image, msg.encode())
 
-            # Save output in Downloads folder
             downloads_path = str(pathlib.Path.home() / "Downloads")
             base_name = os.path.splitext(os.path.basename(filepath))[0]
             output_file = os.path.join(downloads_path, f"{base_name}_hidden.png")
@@ -83,10 +83,10 @@ def perform_action():
     except Exception as e:
         messagebox.showerror("Error", str(e))
 
-# This code id on GUI 
+# ------------------------- GUI -------------------------
 root = TkinterDnD.Tk()
 root.title("Steganography Tool")
-root.geometry("620x470")
+root.geometry("620x480")  # extra space for MAHAVIR
 root.config(bg="white")
 
 try:
@@ -97,14 +97,12 @@ except:
 mode = tk.StringVar(value="hide")
 file_path = tk.StringVar()
 
-# Mode Selection
-tk.Label(root, text="Select Mode:", bg="white", font=("Arial", 11)).pack(pady=5)
+tk.Label(root, text="Select Mode:", bg="white", font=("Arial", 11)).pack(pady=10)
 mode_frame = tk.Frame(root, bg="white")
 mode_frame.pack()
 tk.Radiobutton(mode_frame, text="Hide Message", variable=mode, value="hide", command=switch_mode, bg="white").pack(side="left", padx=50)
 tk.Radiobutton(mode_frame, text="Extract Message", variable=mode, value="extract", command=switch_mode, bg="white").pack(side="left", padx=50)
 
-# Drag-and-Drop Area + Browse
 browse_frame = tk.Frame(root, bg="white")
 browse_frame.pack(pady=20)
 
@@ -123,9 +121,29 @@ message_entry = tk.Entry(message_frame, width=50)
 message_entry.pack()
 message_entry.bind("<KeyRelease>", lambda e: check_inputs())
 
+# Pack message frame first
+message_frame.pack(pady=5)
+
 # Action Button
 action_btn = tk.Button(root, text="🔐 Hide Message", command=perform_action, bg="lightgreen", state="disabled")
 action_btn.pack(pady=15)
 
-switch_mode()  # initialize layout
+# Pixel Style Name "MAHAVIR"
+ascii_label = tk.Label(
+    root,
+    text="""
+███    ███  █████  ██   ██  █████  ██    ██ ██ ██████  
+████  ████ ██   ██ ██   ██ ██   ██ ██    ██ ██ ██   ██ 
+██ ████ ██ ███████ ███████ ███████ ██    ██ ██ ██████  
+██  ██  ██ ██   ██ ██   ██ ██   ██ ██    ██ ██ ██   ██ 
+██      ██ ██   ██ ██   ██ ██   ██  ██████  ██ ██   ██ 
+""",
+    font=("Courier", 8),
+    fg="gray20",
+    bg="white",
+    justify="center"
+)
+ascii_label.pack(pady=(10, 15))
+
+switch_mode()
 root.mainloop()
