@@ -25,8 +25,8 @@ This is a Python-based steganography app that hides secret text inside image fil
 hide-text-in-image/ \
 ├── src/ # Python source \
 │ └── hide_text_in_image.py \
-├── exe/ # ImageSteganography.exe file \
-│ └── main.exe \
+├── exe/ # .exe file \
+│ └── ImageSteganography.exe \
 ├── screenshots/ # Screenshot images \
 │ ├── interface(1).png \
 │ └── interface(2).png \
@@ -52,7 +52,7 @@ Option 2: Windows EXE
 Just double-click:
 
 ```bash
-exe/main.exe
+exe/ImageSteganography.exe
 ```
 ---
 
