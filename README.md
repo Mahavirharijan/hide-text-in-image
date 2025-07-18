@@ -45,15 +45,14 @@ pip install -r requirements.txt
 ## ▶️ Run the App
 Option 1: Run from Python source
 
-```bash
-python src/hide_text_in_image.py
-```
-Option 2: Windows EXE
 Just double-click:
+[src/hide_text_in_image.py](src/hide_text_in_image.py)
 
-```bash
-exe/ImageSteganography.exe
-```
+Option 2: Windows EXE
+
+Just double-click:
+[exe/ImageSteganography.exe](exe/ImageSteganography.exe)
+
 ---
 
 ## 📄 License
