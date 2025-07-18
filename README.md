@@ -63,6 +63,6 @@ See LICENSE for full text.
 
 ## 👤 Author
 Mahavir Harijan\
-GitHub: @MahavirHarijan
+GitHub: @Mahavirharijan
 
 ---
