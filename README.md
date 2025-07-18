@@ -1,67 +1,68 @@
 # 🕵️‍♂️ Image Steganography GUI Tool
 
-This is a Python-based GUI application that allows you to **hide secret messages inside image files** and extract them later.
-The app supports **drag-and-drop**, **multiple image formats**, and **automatically saves output in your Downloads folder**.
+This is a Python-based steganography app that hides secret text inside image files and extracts it back easily. Supports PNG, JPG, JPEG, BMP formats.
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-* ✅ Hide messages inside `.png`, `.jpg`, `.jpeg`, and `.bmp` images
-* ✅ Extract hidden messages from images
-* ✅ Drag & Drop support for easy file input
-* ✅ File browser button
-* ✅ Auto output in `Downloads` folder (no overwrite)
-* ✅ Output image named as `originalname_hidden.png`
-* 🧠 Simple GUI using Tkinter
+- 🔐 Hide secret messages in images
+- 🔓 Extract hidden messages
+- 🧰 Drag-and-drop GUI
+- 🖼️ Supports PNG, JPG, JPEG, BMP
+- 💾 Saves output to Downloads
 
 ---
 
-## 🔧 Requirements
+## 🖼️ GUI Preview
 
-* Python 3.6 or higher
+![GUI Screenshot](screenshots/interface(1).png)
+![GUI Screenshot](screenshots/interface(2).png)
+---
 
-### 📦 Install Dependencies:
+## 📁 Folder Structure
+
+hide-text-in-image/
+├── src/ # Python source
+│ └── hide_text_in_image.py
+├── exe/ # .exe file
+│ └── main.exe
+├── screenshots/ # Screenshot images
+│ └── gui_preview.png
+├── README.md
+├── LICENSE
+└── requirements.txt
+
+---
+
+## ⚙️ Installation
 
 ```bash
-pip install pillow stepic tkinterdnd2
+pip install -r requirements.txt
 ```
-
 ---
-
-## 📂 Supported Formats
-
-* PNG
-* JPG / JPEG
-* BMP
-
----
-
-## 🧑‍💻 Author
-
-**Mahavir Harijan**
-
-This tool includes a personalized ASCII-style footer with "MAHAVIR" branding inside the application GUI.
-
----
-
-## 📦 Convert to EXE (Optional)
-
-Want to convert this to a `.exe` file?
-
-1. Install pyinstaller:
+## ▶️ Run the App
+Option 1: Run from Python source
 
 ```bash
-pip install pyinstaller
+python src/hide_text_in_image.py
 ```
-
-2. Run the command:
+Option 2: Windows EXE
+Just double-click:
 
 ```bash
-pyinstaller --onefile --windowed gui_steganography.py
+exe/main.exe
 ```
+---
 
-3. Your `.exe` will be available in the `dist` folder.
+## 📄 License
+Licensed under the MIT License.\
+See LICENSE for full text.
 
 ---
 
+## 👤 Author
+Mahavir Harijan\
+GitHub: @MahavirHarijan
+
+---
