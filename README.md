@@ -25,10 +25,11 @@ This is a Python-based steganography app that hides secret text inside image fil
 hide-text-in-image/ \
 ├── src/ # Python source \
 │ └── hide_text_in_image.py \
-├── exe/ # .exe file \
+├── exe/ # ImageSteganography.exe file \
 │ └── main.exe \
 ├── screenshots/ # Screenshot images \
-│ └── gui_preview.png \
+│ ├── interface(1).png \
+│ └── interface(2).png \
 ├── README.md \
 ├── LICENSE \
 └── requirements.txt
