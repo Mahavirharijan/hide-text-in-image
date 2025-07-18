@@ -22,15 +22,15 @@ This is a Python-based steganography app that hides secret text inside image fil
 
 ## 📁 Folder Structure
 
-hide-text-in-image/
-├── src/ # Python source
-│ └── hide_text_in_image.py
-├── exe/ # .exe file
-│ └── main.exe
-├── screenshots/ # Screenshot images
-│ └── gui_preview.png
-├── README.md
-├── LICENSE
+hide-text-in-image/ \
+├── src/ # Python source \
+│ └── hide_text_in_image.py \
+├── exe/ # .exe file \
+│ └── main.exe \
+├── screenshots/ # Screenshot images \
+│ └── gui_preview.png \
+├── README.md \
+├── LICENSE \
 └── requirements.txt
 
 ---
